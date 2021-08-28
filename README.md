@@ -1,4 +1,4 @@
-# datasette-plugin-template
+# Template repository for creating new Datasette plugins
 
 This GitHub [template repository](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-on-github/creating-a-repository-from-a-template) can be used to create a new repository with the skeleton of a Datasette plugin, based on the [datasette-plugin](https://github.com/simonw/datasette-plugin) cookiecutter.
 
