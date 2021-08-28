@@ -18,3 +18,9 @@ Once created, your new repository will execute a GitHub Actions workflow that us
 You can see an example of a repository generated using this template here:
 
 - https://github.com/simonw/datasette-plugin-template-repository-demo
+
+## Enabling workflows in your new repository
+
+GitHub Actions like this are not allowed to create new workflows themselves.
+
+Your new repository will have a folder in it called `.github/rename-this-to-workflows` - rename that folder to `.github/workflows` to enable the `test.yml` and `publish.yml` workflows, which can then run tests for your plugin and publish new GitHub releases to PyPI, as [described here](https://github.com/simonw/datasette-plugin#publishing-your-plugin-as-a-package-to-pypi).
