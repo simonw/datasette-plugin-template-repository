@@ -1,0 +1,4 @@
+# To get the tests to pass when the repo is first copied
+
+[project.optional-dependencies]
+test = ["pytest"]
