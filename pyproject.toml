@@ -2,6 +2,7 @@
 
 [project]
 name = "datasette-plugin-template-repository"
+version = "0.1"
 
 [project.optional-dependencies]
 test = ["pytest"]
