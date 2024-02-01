@@ -23,8 +23,14 @@ You can see an example of a repository generated using this template here:
 
 The `test.yml` GitHub Actions workflow will run your tests automatically any time you push a change to the repo.
 
-The `publish.yml` Action runs when you create a new GitHub release. It can build and upload your package to [PyPI](https://pypi.org/).
+The `publish.yml` Action runs when you create a new GitHub release. It will build and upload your package to [PyPI](https://pypi.org/).
 
-For this to work, you need to create an API token for your PyPI account and add that to your repository as a secret called `PYPI_TOKEN`.
+For this to work, you need to create an environment in your GitHub repository called `release`. You then need to configure PyPI with a new "pending publisher" with the following settings:
 
-See [Publishing your plugin as a package to PyPI](https://github.com/simonw/datasette-plugin#publishing-your-plugin-as-a-package-to-pypi) for details.
+- PyPI Project Name: `datasette-name-of-your-plugin`
+- Owner: Your GitHub username or organization
+- Repository name: The name of your repository
+- Workflow name: `publish.yml`
+- Environment name: `release`
+
+See [Publish releases to PyPI from GitHub Actions without a password or token](https://til.simonwillison.net/pypi/pypi-releases-from-github) for details.
