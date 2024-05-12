@@ -56,7 +56,7 @@ jobs:
           pushd /tmp
           cookiecutter gh:simonw/datasette-plugin --no-input \
             plugin_name=$(echo $INFO | jq -r '.repository.name | sub("datasette-"; "")') \
-            description="$(echo $INFO | jq -r .repository.description)" \
+            description="$(echo $INFO | jq -r .repository.description | sed 's/\"/\\\"/g')" \
             github_username="$(echo $INFO | jq -r .repository.owner.login)" \
             author_name="$(echo $INFO | jq -r .repository.owner.name)"
           popd
